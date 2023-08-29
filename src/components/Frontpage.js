@@ -33,7 +33,9 @@ function Frontpage() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="/viewcast">MEASLES</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/viewcast">
+                  MEASLES
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Card.Body>
