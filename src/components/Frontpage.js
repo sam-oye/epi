@@ -28,7 +28,10 @@ function Frontpage() {
                 LOGIN
               </Link>
               <> </>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
+              <Link to="/viewcast" className="btn btn-success">
+                VIEW FORECAST
+              </Link>
+              {/* <Dropdown.Toggle variant="success" id="dropdown-basic">
                 VIEW FORECAST
               </Dropdown.Toggle>
 
@@ -36,7 +39,7 @@ function Frontpage() {
                 <Dropdown.Item as={Link} to="/viewcast">
                   MEASLES
                 </Dropdown.Item>
-              </Dropdown.Menu>
+              </Dropdown.Menu> */}
             </Dropdown>
           </Card.Body>
         </Card>
