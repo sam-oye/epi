@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import axios from "axios";
+import LineGraph from "./Linegraph";
 
 function ViewCast() {
   const numCards = 20; // Number of cards to generate
@@ -54,6 +55,8 @@ function ViewCast() {
     <div>
       <h3>THESE ARE THE PREDICTION OF MEASLES</h3>
       <Row>{generateCards()}</Row>
+      <h1>Graph of Prediction</h1>
+      <LineGraph data={weekData} />
     </div>
   );
 }
