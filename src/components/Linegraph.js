@@ -8,6 +8,7 @@ import {
   LinearScale,
   Title,
   CategoryScale,
+  Legend,
 } from "chart.js";
 
 Chart.register(
@@ -16,16 +17,18 @@ Chart.register(
   PointElement,
   LinearScale,
   Title,
-  CategoryScale
+  CategoryScale,
+  Legend
 );
+
 function LineGraph({ data }) {
   const chartData = {
-    labels: data.map((_, index) => index), // Use indices as labels
+    labels: data.map((_, index) => `${index + 1}`), // Display labels like "Week 1", "Week 2", ...
     datasets: [
       {
-        label: "Values",
+        label: "POPULATION", // Legend label
         fill: false,
-        borderColor: "rgba(75,192,192,1)",
+        borderColor: "red",
         data: data,
       },
     ],
@@ -35,6 +38,21 @@ function LineGraph({ data }) {
     scales: {
       y: {
         beginAtZero: true,
+        title: {
+          display: true,
+          text: "POPULATION", // Y-axis label
+        },
+      },
+      x: {
+        title: {
+          display: true,
+          text: "WEEKS", // X-axis label
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
       },
     },
   };
