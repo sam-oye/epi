@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Admin from "./components/Admin";
 import ViewCast from "./components/ViewCast";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -15,11 +15,11 @@ function App() {
     <Router className="App ">
       <Container>
         <Row className="justify-content-md-center">
+          <Header />
           <Col xs lg="auto">
             {" "}
           </Col>
           <Col md="8">
-            <Header />
             <></>
             <Routes>
               <Route path="/" element={<Frontpage />} />
@@ -31,11 +31,7 @@ function App() {
             {/* <Admin /> */}
             {/* <ViewCast /> */}
           </Col>
-          <Col xs lg="3">
-            <Link to="/" className="btn btn-success">
-              HOME PAGE
-            </Link>
-          </Col>
+          <Col xs lg="auto"></Col>
         </Row>
       </Container>
     </Router>
